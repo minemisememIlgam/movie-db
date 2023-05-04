@@ -12,6 +12,15 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
+.movie {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.movie > div {
+  flex: 1 0 300px; /* Устанавливает ширину элемента в 300 пикселей */
+  margin: 10px;
+}
 
 .App-header {
   background-color: #282c34;
