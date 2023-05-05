@@ -106,7 +106,7 @@ User
               {showDescription[index] ? <h1>{elem.overview}</h1> : null}
 
               {addedToLikedOrNot[index] ? (
-                <h1>mate to!</h1>
+                <h1>Je to tam!</h1>
               ) : (
                 <button
                   onClick={() => {
