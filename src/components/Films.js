@@ -2,7 +2,8 @@ import { useContext } from "react";
 import Context from "../Context";
 
 function Films() {
-  const { search, setSearch, state, setState } = useContext(Context);
+  const { addToLiked, liked, setLiked, search, setSearch, state, setState } =
+    useContext(Context);
 
   function handleSearchSubmit(event) {
     event.preventDefault();
@@ -20,7 +21,6 @@ function Films() {
     setSearch(event.target.value);
   }
 
-  console.log(search);
   return (
     <div className="movie">
       <form onSubmit={handleSearchSubmit}>
@@ -41,6 +41,9 @@ function Films() {
                 src={`https://image.tmdb.org/t/p/w500/${elem.poster_path}`}
                 alt="b"
               />
+              <button onClick={() => addToLiked()}>
+                Pridat do oblibenych!
+              </button>
             </div>
           );
         })
