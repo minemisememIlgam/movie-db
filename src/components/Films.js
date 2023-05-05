@@ -18,7 +18,7 @@ function Films() {
   } = useContext(Context);
 
   const [addedToLikedOrNot, setAddedToLikedOrNot] = useState(
-    Array(10).fill(false)
+    Array(14).fill(false)
   );
   const [showDescription, setShowDescription] = useState(Array(10).fill(false)); //мы создаем массив с таким же количеством элементов как в массиве с фильмами
 
@@ -67,19 +67,24 @@ User
   console.log(addedToLikedOrNot[0]);
   return (
     <div className="movie">
-      <FilmsByAge />
-      <Link to="Oblibene">Na hlavni stranku!</Link>{" "}
-      <form onSubmit={handleSearchSubmit}>
-        <input
-          value={search}
-          onChange={handleInputChange}
-          type="text"
-          placeholder="search film"
-        />
-        <button type="submit">Search</button>
-      </form>
+      <h1 className="text">by Ilgam Mindubaev </h1>
+      <div className="link-container">
+        <Link to="Oblibene">K oblibenim!</Link>
+      </div>
+      <div className="search-language-container">
+        <form onSubmit={handleSearchSubmit}>
+          <input
+            value={search}
+            onChange={handleInputChange}
+            type="text"
+            placeholder="Search film"
+          />
+          <button type="submit">Search</button>
+        </form>
+        <FilmsByAge />
+      </div>
       {state ? (
-        state.slice(0, 10).map((elem, index) => {
+        state.slice(0, 14).map((elem, index) => {
           return (
             <div>
               <h1>{elem.title}</h1>

@@ -18,6 +18,7 @@ code {
   justify-content: space-between;
   align-items: center;
   padding: 20px;
+  margin-top: 150px;
 }
 
 .movie div {
@@ -50,4 +51,112 @@ code {
 .movie button:hover {
   background-color: #fff;
   color: #1a1a1a;
+}
+.nadl {
+  color: red;
+  font-size: 20px;
+}
+
+.adl {
+  color: blue;
+  font-size: 16px;
+}
+select {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #fff;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  appearance: none;
+}
+
+select:hover {
+  border-color: #66afe9;
+}
+
+select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+option {
+  color: #495057;
+  background-color: #fff;
+}
+
+option:hover {
+  color: #fff;
+  background-color: #007bff;
+}
+
+option:checked {
+  color: #fff;
+  background-color: #007bff;
+}
+form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+input[type="text"] {
+  width: 300px;
+  height: 30px;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  outline: none;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: #fff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 5px;
+  margin-left: 10px;
+  font-size: 16px;
+  cursor: pointer;
+}
+Link {
+  display: block;
+  text-align: center;
+  font-size: 18px;
+  color: #fff;
+  background-color: #2a9d8f;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-decoration: none;
+  margin-top: 20px;
+}
+
+Link:hover {
+  background-color: #21867a;
+}
+.search-language-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+.link-container {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  font-size: 24px;
+  color: #fff;
+  background-color: #000;
 }

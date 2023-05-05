@@ -8,10 +8,10 @@ function FilmsByAge() {
   };
   return (
     <select value={selectedValue} onChange={wasClicked}>
-      <option className="nadl" value="japanese" defaultValue>
+      <option className="nadl" value="japanese">
         Japanese films
       </option>
-      <option className="adl" value="all">
+      <option className="adl" value="all" defaultValue>
         English Films
       </option>
       <option className="nadl" value="ru" defaultValue>
