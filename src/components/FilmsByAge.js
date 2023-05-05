@@ -12,7 +12,10 @@ function FilmsByAge() {
         Japanese films
       </option>
       <option className="adl" value="all">
-        All Films
+        English Films
+      </option>
+      <option className="nadl" value="ru" defaultValue>
+        Russian films
       </option>
     </select>
   );
