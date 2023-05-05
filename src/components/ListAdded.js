@@ -1,9 +1,9 @@
 import Context from "../Context";
 import { useContext } from "react";
-
+import { Link } from "react-router-dom";
 const ListAdded = () => {
-  const { liked } = useContext(Context);
-  console.log(liked);
-  return <div>{liked ? <h1>Film was liked! </h1> : <h1>hgh </h1>}</div>;
+  const { array, setArray, liked } = useContext(Context);
+
+  return <div>Result is {array}</div>;
 };
 export default ListAdded;

@@ -4,7 +4,8 @@ import Context from "./Context";
 import ListAdded from "./components/ListAdded";
 import FilmsByAge from "./components/FilmsByAge";
 import Films from "./components/Films";
-
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import { Link } from "react-router-dom";
 function App() {
   const [array, setArray] = useState([]);
   const [liked, setLiked] = useState(false);
@@ -56,11 +57,14 @@ function App() {
 
   return (
     <Context.Provider value={value}>
-      <div className="App">
-        <FilmsByAge />
-        <ListAdded />
-        <Films />
-      </div>
+      <Router>
+        <div className="App">
+          <Routes>
+            <Route path="/" element={<Films />} />
+            <Route path="Oblibene" element={<ListAdded />} />
+          </Routes>
+        </div>
+      </Router>
     </Context.Provider>
   );
 }

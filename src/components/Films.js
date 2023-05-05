@@ -1,9 +1,20 @@
 import { useContext } from "react";
+import { Link } from "react-router-dom";
 import Context from "../Context";
+import FilmsByAge from "./FilmsByAge";
 
 function Films() {
-  const { addToLiked, liked, setLiked, search, setSearch, state, setState } =
-    useContext(Context);
+  const {
+    addToLiked,
+    liked,
+    setLiked,
+    search,
+    setSearch,
+    state,
+    setState,
+    array,
+    setArray,
+  } = useContext(Context);
 
   function handleSearchSubmit(event) {
     event.preventDefault();
@@ -20,9 +31,13 @@ function Films() {
   function handleInputChange(event) {
     setSearch(event.target.value);
   }
-
+  const pushToArray = (title) => {
+    setArray([...array, title]);
+  };
   return (
     <div className="movie">
+      <FilmsByAge />
+      <Link to="Oblibene">Na hlavni stranku!</Link>{" "}
       <form onSubmit={handleSearchSubmit}>
         <input
           value={search}
@@ -37,11 +52,16 @@ function Films() {
           return (
             <div>
               <h1>{elem.title}</h1>
+              <h1>{elem.overview}</h1>
               <img
                 src={`https://image.tmdb.org/t/p/w500/${elem.poster_path}`}
                 alt="b"
               />
-              <button onClick={() => addToLiked()}>
+              <button
+                onClick={() => {
+                  pushToArray(elem.title);
+                }}
+              >
                 Pridat do oblibenych!
               </button>
             </div>
