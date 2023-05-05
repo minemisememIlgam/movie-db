@@ -4,6 +4,25 @@ import { Link } from "react-router-dom";
 const ListAdded = () => {
   const { array, setArray, liked } = useContext(Context);
 
-  return <div>Result is {array}</div>;
+  const deleteFromLiked = (index) => {
+    const newArray = [...array];
+    newArray.splice(index, 1);
+    setArray(newArray);
+  };
+
+  return (
+    <div>
+      {" "}
+      {array.map((elem, index) => (
+        <div>
+          <h1>{elem}</h1>
+          <button onClick={() => deleteFromLiked(index)}>
+            {" "}
+            odebrat z oblibenych
+          </button>
+        </div>
+      ))}{" "}
+    </div>
+  );
 };
 export default ListAdded;
